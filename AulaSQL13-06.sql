@@ -52,13 +52,15 @@ group by Country;
 
 /*5. Verificar quantos fornecedores estão cadastrados por país no qual essa quantidade tem que ser acima de 1.*/
 
-SELECT Country 'País', count(Country) 'Fornecedores cadastrados por países'
+SELECT Country 'País',
+count(Country) 'Fornecedores cadastrados por países'
 FROM Suppliers
 group by Country
 having count(Country) > 1;
 
 /*6. Calcular a quantidade de pedidos realizadas por funcionário. */
 
-SELECT EmployeeID 'ID Funcionario', count(EmployeeID) 'Qtde de pedidos por funcionários'
+SELECT EmployeeID 'ID Funcionario',
+count(EmployeeID) 'Qtde de pedidos por funcionários'
 FROM Orders
 group by EmployeeID;
