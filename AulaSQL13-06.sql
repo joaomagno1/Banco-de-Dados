@@ -40,7 +40,8 @@ group by CategoryID;
 
 /*3. Apresentar o total de quantidades de produtos por pedido.*/
 
-SELECT OrderID, sum(quantity) 'Total de Qtde por pedido'
+SELECT OrderID,
+sum(quantity) 'Total de Qtde por pedido'
 FROM OrderDetails 
 group by OrderID;
 
