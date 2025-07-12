@@ -69,3 +69,7 @@ where p.id_loja = l.id_loja and p.id_categoria = c.id_categoria;
 select p.nome_produto, p.preco, l.nome_loja, c.nome
 	from produtos p join lojas l on p.id_loja = l.id_loja
     				join categorias c on p.id_categoria = c.id_categoria;
+                    
+select p.nome_produto, p.preco, l.nome_loja, c.nome
+	from produtos p join lojas l using(id_loja)
+    				join categorias c using(id_categoria);
